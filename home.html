@@ -9,7 +9,18 @@
 </head>
 <body>
     
+ <script>
+        var password = "TRELSTAD";
+        (function passcodeprotect() {
+           var passcode = prompt("Enter PassCode");
+           while (passcode !== password) {
+              alert("Incorrect PassCode");
+              return passcodeprotect();
+           }
+        }());
+        alert('Welcome to my Student Teaching Website');
 
+     </script>
 <div class = "container">
     <div class="mainbox" name="mainbox"> 
         <h2 font="Mountains of Christmas"> Welcome to Christmas</h2>
