@@ -1,0 +1,99 @@
+{
+    "people":[
+        "T",
+        "Derek",
+        "Andrea",
+        "Thea",
+        "Graham",
+        "Julie",
+        "Lizzy",
+        "Ellie",
+        "Bill",
+        "Brian",
+        "Piper",
+        "Cady",
+        "Trel",
+        "Matt",
+        "Jeremy",
+        "Lindsay",
+        "Emmy",
+        "Audrey"
+    ]
+        
+    
+    "relations": {
+     "children": {
+        "Brian": [
+            "Cady",
+            "Trel",
+            "Matt"
+        ],
+        "Piper": [
+            "Cady",
+            "Trel",
+            "Matt"
+        ],
+        "Andrea": [
+            "Thea"
+        ],
+        "Derek": [
+            "Thea"
+         ],
+        "Julie": [
+            "Ellie",
+            "Lizzy",
+            "Bill"
+        ],
+        "Graham": [
+            "Ellie",
+            "Lizzy",
+            "Bill"
+        ],
+        "Lindsay": [
+            "Emmy",
+            "Audrey"
+        ],
+        "Jeremy": [
+            "Emmy",
+            "Audrey"
+        ]
+    
+
+     },
+     "siblings": [
+            [
+                "Cady",
+                "Trel",
+                "Matt"
+            ],
+            [
+                "Lizzy",
+                "Ellie",
+                "Bill"
+            ],
+            [
+                "Emmy",
+                "Audrey"
+            ]
+
+        ],
+        "spouses":[
+        [
+            "Brian",
+            "Piper"
+        ],
+        [
+            "Andrea",
+            "Derek"
+        ],
+        [
+            "Julie",
+            "Graham"
+        ],
+        [
+            "Lindsay",
+            "Jeremy"
+        ]
+    ]
+}
+}
