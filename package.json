@@ -1,0 +1,15 @@
+{
+  "name": "christmaslist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "christmas_list.ts",
+  "scripts": {
+    "test": "npx ts-node ."
+  },
+  "author": "trel",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,117 @@
+{
+    "adults": [
+        "T",
+        "Derek",
+        "Andrea",
+        "Thea",
+        "Graham",
+        "Julie",
+        "Lizzy",
+        "Ellie",
+        "Bill",
+        "Brian",
+        "Piper",
+        "Cady",
+        "Trel",
+        "Matt",
+        "Jeremy",
+        "Lindsay",
+        "Emmy",
+        "Audrey"
+    ],
+    "relations": {
+        "grandchildren": {},
+        "children": {
+            "Brian": [
+                "Cady",
+                "Trel",
+                "Matt"
+            ],
+            "Piper": [
+                "Cady",
+                "Trel",
+                "Matt"
+            ],
+            "Graham": [
+                "Ellie",
+                "Lizzy",
+                "Bill"
+            ],
+            "Julie": [
+                "Ellie",
+                "Lizzy",
+                "Bill"
+            ],
+            "Jeremy": [
+                "Audrey",
+                "Emmy"
+            ],
+            "Lindsay": [
+                "Audrey",
+                "Emmy"
+            ],
+            "Derek": [
+                "Thea"
+            ],
+            "Andrea": [
+                "Thea"
+            ]
+        },
+        "siblings": [
+            [
+                "Cady",
+                "Trel",
+                "Matt"
+            ],
+            [
+                "Ellie",
+                "Lizzy",
+                "Bill"
+            ],
+            [
+                "Audrey",
+                "Emmy"
+            ]
+        ],
+        "spouses": [
+            [
+                "Graham",
+                "Julie"
+            ],
+            [
+                "Brian",
+                "Piper"
+            ],
+            [
+                "Derek",
+                "Andrea"
+            ],
+            [
+                "Jeremy",
+                "Lindsay"
+            ]
+        ]
+    },
+    "years": {
+        "2025": {
+            "Andrea": "Emmy",
+            "Audrey": "Andrea",
+            "Bill": "Cady",
+            "Brian": "Audrey",
+            "Cady": "Julie",
+            "Derek": "Lizzy",
+            "Ellie": "T",
+            "Emmy": "Ellie",
+            "Graham": "Thea",
+            "Jeremy": "Matt",
+            "Julie": "Brian",
+            "Lindsay": "Piper",
+            "Lizzy": "Derek",
+            "Matt": "Lindsay",
+            "Piper": "Bill",
+            "T": "Trel",
+            "Thea": "Graham",
+            "Trel": "Jeremy"
+        }
+    }
+}

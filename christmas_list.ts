@@ -1,15 +1,18 @@
 const fs = require('fs');
 const christmas = require('./christmas.json');
+const { years } = christmas;
+const adults = new Set<string>(christmas.adults);
+const kids = new Set<string>(christmas.kids);
 let { relations } = christmas; // instantiating like this for intellisense purposes
 relations = {};
 
 for (const relation of Object.keys(christmas.relations)) {
-    let contents = {};
+    let contents : { [key : string | number] : Set<string> };
     if (christmas.relations[relation] instanceof Array) {
-        contents = [];
+        contents = [] as {[key: number]: Set<string>};
     }
     else {
-        contents = {};
+        contents = {} as {[key: string]: Set<string>};
     }
     for (const key of Object.keys(christmas.relations[relation]))
         contents[key] = new Set(christmas.relations[relation][key]);
@@ -19,41 +22,50 @@ for (const relation of Object.keys(christmas.relations)) {
 const current_year = 1 + Math.max(...Object.keys(years).map(x => Number(x)));
 console.log(`Generating list for ${current_year}...`);
 
-const people = [people];
+const people = kids.union(adults);
 
-const ungiftable = {};
+const ungiftable : { [name: string] : Set<string> } = {};
 
 for (const person of people) {
     ungiftable[person] = new Set([person]);
 }
 
-for (const parent of relations.children) {
-    ungiftable[parent] = (relations.children[parent]);
+for (const parent of Object.keys(relations.children)) {
+    ungiftable[parent] = ungiftable[parent].union(relations.children[parent]);
     for (const child of relations.children[parent])
         ungiftable[child].add(parent);
 }
 
+for (const grandparent of Object.keys(relations.grandchildren)) {
+    ungiftable[grandparent] = ungiftable[grandparent].union(relations.grandchildren[grandparent]);
+    for (const grandchild of relations.grandchildren[grandparent])
+        ungiftable[grandchild].add(grandparent);
+}
 
 for (const sibs of relations.siblings) {
     for (const person of sibs) {
-        ungiftable[person] = (sibs);
+        ungiftable[person] = ungiftable[person].union(sibs);
     }
 }
 
 for (const sps of relations.spouses) {
     for (const person of sps) {
-        ungiftable[person] = (sps);
+        ungiftable[person] = ungiftable[person].union(sps);
     }
 }
 
-function find_giftable {
-    const giftable = {};
-    const targets = {};
+function find_giftable(group : Set<string>, backtrack_years : Array<string>) : null | { [name : string] : string } {
+    const giftable = {} as { [name : string]: Set<string> };
+    const targets = {} as { [name : string]: string };
     for (const person of group) {
-        giftable[person] = 
-    
+        giftable[person] = group.difference(ungiftable[person]);
+        targets[person] = null; // setting here rather than later forces ordering when iterated
     }
-   
+    for (const year of backtrack_years)
+        for (const person of group) {
+            // console.log(`${person} ${year}`);
+            giftable[person].delete(years[year][person]);
+        }
 
     const remaining = new Set(group);
     while(remaining.size > 0) {
@@ -117,7 +129,7 @@ file_contents['kids'] = christmas.kids;
 file_contents['relations'] = christmas.relations;
 file_contents['years'] = years;
 
-let filename = `./christmas2025.json`;
+let filename = `./christmas_${current_year - 1}.json`;
 let attempt = 0;
 while (fs.existsSync(filename)) {
     filename = `./christmas_${current_year - 1}_${++attempt}.json`;

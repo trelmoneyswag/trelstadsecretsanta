@@ -1,5 +1,5 @@
 {
-    "people":[
+    "adults": [
         "T",
         "Derek",
         "Andrea",
@@ -18,82 +18,83 @@
         "Lindsay",
         "Emmy",
         "Audrey"
-    ]
-        
-    
+    ],
     "relations": {
-     "children": {
-        "Brian": [
-            "Cady",
-            "Trel",
-            "Matt"
-        ],
-        "Piper": [
-            "Cady",
-            "Trel",
-            "Matt"
-        ],
-        "Andrea": [
-            "Thea"
-        ],
-        "Derek": [
-            "Thea"
-         ],
-        "Julie": [
-            "Ellie",
-            "Lizzy",
-            "Bill"
-        ],
-        "Graham": [
-            "Ellie",
-            "Lizzy",
-            "Bill"
-        ],
-        "Lindsay": [
-            "Emmy",
-            "Audrey"
-        ],
-        "Jeremy": [
-            "Emmy",
-            "Audrey"
-        ]
-    
-
-     },
-     "siblings": [
+        "grandchildren": {},
+        "children": {
+            "Brian": [
+                "Cady",
+                "Trel",
+                "Matt"
+            ],
+            "Piper": [
+                "Cady",
+                "Trel",
+                "Matt"
+            ],
+            "Graham": [
+                "Ellie",
+                "Lizzy",
+                "Bill"
+            ],
+            "Julie": [
+                "Ellie",
+                "Lizzy",
+                "Bill"
+            ],
+            "Jeremy": [
+                "Audrey",
+                "Emmy"
+            ],
+            "Lindsay": [
+                "Audrey",
+                "Emmy"
+            ],
+            "Derek": [
+                "Thea"
+            ],
+            "Andrea": [
+                "Thea"
+            ]
+        },
+        "siblings": [
             [
                 "Cady",
                 "Trel",
                 "Matt"
             ],
             [
-                "Lizzy",
                 "Ellie",
+                "Lizzy",
                 "Bill"
             ],
             [
-                "Emmy",
-                "Audrey"
+                "Audrey",
+                "Emmy"
             ]
-
         ],
-        "spouses":[
-        [
-            "Brian",
-            "Piper"
-        ],
-        [
-            "Andrea",
-            "Derek"
-        ],
-        [
-            "Julie",
-            "Graham"
-        ],
-        [
-            "Lindsay",
-            "Jeremy"
+        "spouses": [
+            [
+                "Graham",
+                "Julie"
+            ],
+            [
+                "Brian",
+                "Piper"
+            ],
+            [
+                "Derek",
+                "Andrea"
+            ],
+            [
+                "Jeremy",
+                "Lindsay"
+            ]
         ]
-    ]
-}
+    },
+    "years": {
+        "2024":{
+            
+        }
+    }
 }
