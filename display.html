@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel ="stylesheet" href="style.css">
+   <style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 100px;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  margin-top: 100px;
+}
+
+
+</style>
+</head>
 </head>
 <body>
     
@@ -12,11 +51,112 @@
     <p> Come back next week and this will be where you find your person you need give to!!! </p>
 </body>
 
+<button class="tablink" onclick="openPage('start')"> Start</button>
+<button class="tablink" onclick="openPage('T')">T</button>
+<button class="tablink" onclick="openPage('Derek')" id="defaultOpen">Derek</button>
+<button class="tablink" onclick="openPage('Andrea')">Andrea</button>
+<button class="tablink" onclick="openPage('Thea')">Thea</button>
+<button class="tablink" onclick="openPage('Graham')" id="defaultOpen">Graham</button>
+<button class="tablink" onclick="openPage('Julie')" id="defaultOpen">Julie</button>
+<button class="tablink" onclick="openPage('Ellie')" id="defaultOpen">Ellie</button>
+<button class="tablink" onclick="openPage('Bill')" id="defaultOpen">Bill</button>
+<button class="tablink" onclick="openPage('Lizzy')" id="defaultOpen">Lizzy</button>
+<button class="tablink" onclick="openPage('Brian')" id="defaultOpen">Brian</button>
+<button class="tablink" onclick="openPage('Piper')" id="defaultOpen">Piper</button>
+<button class="tablink" onclick="openPage('Cady')" id="defaultOpen">Cady</button>
+<button class="tablink" onclick="openPage('Matt')" id="defaultOpen">Matt</button>
+<button class="tablink" onclick="openPage('Trel')" id="defaultOpen">Trel</button>
+<button class="tablink" onclick="openPage('Jeremy')" id="defaultOpen">Jeremy</button>
+<button class="tablink" onclick="openPage('Lindsay')" id="defaultOpen">Lindsay</button>
+<button class="tablink" onclick="openPage('Audrey')" id="defaultOpen">Audrey</button>
+<button class="tablink" onclick="openPage('Emmy')" id="defaultOpen">Emmy</button>
+<button class="tablink" onclick="openPage('Emmy')" id="defaultOpen"> </button>
+
+
+           
+          
+<div id="start" class="tabcontent">
+  <h1> click your name to see you are giving to... NO CHEATING</h1>
+</div>
+<div id="T" class="tabcontent">
+  <h1> you are giving to .... CADY</h1>
+</div>
+
+<div id="Derek" class="tabcontent">
+  <h1> you are giving to ....LINDSAY </h1>
+</div>
+
+<div id="Andrea" class="tabcontent">
+ <h1> you are giving to .... EMMY </h1>
+</div>
+
+<div id="Thea" class="tabcontent">
+ <h1> you are giving to .... MATT</h1>
+</div>
+<div id="Graham" class="tabcontent">
+ <h1> you are giving to .... AUDREY</h1>
+</div>
+<div id="Julie" class="tabcontent">
+ <h1> you are giving to .... DEREL </h1>
+</div>
+<div id="Ellie" class="tabcontent">
+ <h1> you are giving to .... THEA </h1>
+</div>
+<div id="Bill" class="tabcontent">
+ <h1> you are giving to .... PIPER </h1>
+</div>
+<div id="Lizzy" class="tabcontent">
+ <h1> you are giving to .... BRIAN</h1>
+</div>
+<div id="Brian" class="tabcontent">
+ <h1> you are giving to .... ANDREA </h1>
+</div>
+<div id="Piper" class="tabcontent">
+ <h1> you are giving to .... JEREMY </h1>
+</div>
+<div id="Cady" class="tabcontent">
+ <h1> you are giving to .... BILL </h1>
+</div>
+<div id="Matt" class="tabcontent">
+ <h1> you are giving to ....  JULIE</h1>
+</div>
+<div id="Trel" class="tabcontent">
+ <h1> you are giving to .... GRAHAM </h1>
+</div>
+<div id="Jeremy" class="tabcontent">
+ <h1> you are giving to .... TREL </h1>
+</div>
+<div id="Lindsay" class="tabcontent">
+ <h1> you are giving to .... LIZZY </h1>
+</div>
+<div id="Audrey" class="tabcontent">
+ <h1> you are giving to .... ELLIE </h1>
+</div>
+<div id="Emmy" class="tabcontent">
+ <h1> you are giving to .... GRANDMA T</h1>
+</div>
 
 
 
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
 
-
+</script>
+</body>
 </html>
-

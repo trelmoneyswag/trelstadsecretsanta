@@ -93,8 +93,27 @@
         ]
     },
     "years": {
-        "2024":{
-            
+        "2024": {},
+        "2025": {
+            "Andrea": "Emmy",
+            "Audrey": "Ellie",
+            "Bill": "Piper",
+            "Brian": "Andrea",
+            "Cady": "Bill",
+            "Derek": "Lindsay",
+            "Ellie": "Thea",
+            "Emmy": "T",
+            "Graham": "Audrey",
+            "Jeremy": "Trel",
+            "Julie": "Derek",
+            "Lindsay": "Lizzy",
+            "Lizzy": "Brian",
+            "Matt": "Julie",
+            "Piper": "Jeremy",
+            "T": "Cady",
+            "Thea": "Matt",
+            "Trel": "Graham"
         }
+        
     }
 }
